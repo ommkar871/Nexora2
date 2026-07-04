@@ -44,5 +44,5 @@ tl.from(".login-form-wrapper",{
 
 document.getElementById("login-form").addEventListener("submit",(e)=>{
     e.preventDefault()
-    window.location.href = "/components/landing.html"
+    window.location.href = "landing.html"
 })
