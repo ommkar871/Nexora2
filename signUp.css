@@ -113,7 +113,7 @@ button img{
     display: flex;
     justify-content: center;
     align-items: center;
-    color:#695b83;
+    color:white;
     font-weight: 600
 }
 .right h2{
@@ -137,14 +137,15 @@ button:hover{
      box-shadow:0 0 1rem rgba(130, 117, 128, 0.8) ;
 }
 form p{
-    color:#553f7c;
+    color:white;
     font-weight: 600
 }
 a {
-    color:white;
-    text-decoration:none
+    color:rgb(48, 48, 190);
+    text-decoration:none;
+    font-weight: 600;
 }
-/* ================= MOBILE RESPONSIVE ================= */
+/* == MOBILE RESPONSIVE == */
 
 @media (max-width:768px){
 
@@ -176,7 +177,7 @@ a {
         margin-top:0.5rem;
     }
     .or,form p{
-        color:#0b011c;
+        color:#f8f6fb;
     }
 
     .left p{
@@ -226,6 +227,7 @@ a {
 
     form>p{
         text-align:center;
+        color:white;
     }
 }
 

@@ -66,7 +66,7 @@ const observer = new IntersectionObserver((entries, observer) => {
     if (entry.isIntersecting) {
       const counter = entry.target;
       const target = +counter.getAttribute('data-target');
-      const increment = target / 2000000; // Adjust speed here
+      const increment = target / 2000000; 
 
       const updateCount = () => {
         const current = +counter.innerText;
@@ -78,7 +78,7 @@ const observer = new IntersectionObserver((entries, observer) => {
         }
       };
       updateCount();
-      observer.unobserve(counter); // Animate only once
+      observer.unobserve(counter); 
     }
   });
 }, { threshold: 0.5 });
