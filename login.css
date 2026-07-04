@@ -1,10 +1,15 @@
 *{
-    margin: 0;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 5px;
     padding: 0;
     box-sizing: border-box;
-    overflow: hidden;
 }
+body{
+    overflow-x: hidden;
 
+}
 a {
     text-decoration: none;
     color: inherit; /* Inherits the font color of the parent element */
@@ -22,13 +27,9 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
 .login-form-wrapper{
-    /* background-color: none; */
     background: rgba(20, 16, 28, 0.75);
-    /* border: 1px solid rgba(255, 255, 255, 0.08); */
-    
     border: 1px solid rgba(144, 95, 242, 0.25);
     box-shadow: 0 0 35px rgba(254, 253, 253, 0.428);
     /* box-shadow: 0 0 40px rgba(111, 66, 193, 0.15); Purple outer glow */
@@ -40,7 +41,9 @@ a {
 
 @media screen and (max-width:600px){
     .login-form-wrapper{
-        height: 75%;
+        width: 100%;
+        height: 100%;
+        
         border-radius: 5%;
     }
 }
@@ -68,7 +71,7 @@ a {
 .left-form{
 
     width: 50%;
-    height: 100%;
+    height: 90%;
     border-top-left-radius: 5%;
     border-bottom-left-radius: 5%;
     /* background-color: black; */
@@ -84,13 +87,28 @@ a {
     align-items: start;
     padding-left: 5%;
     font-family: "Zilla Slab",sans-serif;
+
+    color: antiquewhite;
+    /* background: linear-gradient(135deg, #14111c 0%, #0d0a12 100%); */
+    
+    background: linear-gradient(135deg, #14111c 0%, #0d0a12 100%);
+    background-color: rgba(255, 255, 255, 0.06); 
+    backdrop-filter: blur(12px);                 
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 @media screen and (max-width:600px) {
     .left-form{
         width: 100dvw;
         left: 0%;
+        height: 95%;
+        margin-top :20px;;
         border-radius: 5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        padding-left: 0%;
     }
     .right-form span{
         display: none;
@@ -98,19 +116,12 @@ a {
     
 }
 
-.left-form{
-    color: antiquewhite;
-    /* background: linear-gradient(135deg, #14111c 0%, #0d0a12 100%); */
 
-    background: linear-gradient(135deg, #14111c 0%, #0d0a12 100%);
-    background-color: rgba(255, 255, 255, 0.06); 
-    backdrop-filter: blur(12px);                 
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
 
 .logo-container{
+    margin-top:20%;
     display: inline-block;
-    font-size: 1.2rem;
+    font-size: 3.2rem;
 }
 @media screen and (min-width:760px){
     .logo-container{
@@ -124,12 +135,19 @@ a {
     
     font-size: 1.2rem;
     font-weight: 200;
-    
     margin-bottom: 5%;
 }
 
-.welcome-title h1{
+.welcome-title h1 ,.welcome-title p{padding-top: 3%;
+    text-align: start;
+    padding-bottom: 3%;
     font-weight: 500;
+}
+
+@media screen and (max-width:600px){
+    .welcome-title h1,.welcome-title p{
+        text-align: center;
+    }
 }
 .btn-login{
     margin-top: 2%;
@@ -137,7 +155,6 @@ a {
     width: 80%;
     text-align: match-parent;
 
-    /* background: transparent; */
     color: antiquewhite;
     border: 1px solid rgba(255, 255, 255, 0.2);
     font-size: 1rem;
@@ -146,13 +163,6 @@ a {
     background: linear-gradient(to bottom, #1f1235 0%, #0d0617 100%);
     border: 1px solid rgba(144, 95, 242, 0.2); /* Subtle purple border to define edges */
 
-    /* border-radius: 7%; */
-}
-.divider{
-    width: 80%;
-    font-size: 0.8rem;
-    margin-bottom: 2%;
-    text-align: center;
 }
 
 .btn-google{
@@ -178,6 +188,23 @@ a {
 
     margin-bottom: 5%;
 }
+@media screen and (max-width:600px) {
+    .btn-login{
+        width: 95%;
+        text-align: center;
+    }
+    .btn-google{
+        width: 95%;
+        text-align: center;
+    }
+}
+.divider{
+    width: 80%;
+    font-size: 0.8rem;
+    margin-bottom: 2%;
+    text-align: center;
+}
+
 
 .input-group{
     width: 80%;
@@ -197,6 +224,12 @@ a {
     padding-bottom: 2%;
     padding-top: 2%;
     margin-bottom: 3%;
+}
+
+@media screen and (max-width:600px) {
+    .input-group{
+        width: 95%;
+    }
 }
 .input-group input::placeholder {
     /* color: rgba(255, 255, 255, 0.4); */
@@ -229,5 +262,5 @@ a {
 }
 
 .signup-text{
-    font-size: 0.8rem;
+    font-size: 1.2rem;
 }
